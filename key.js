@@ -63,14 +63,28 @@ function mnemonicToPrivateKey(mnemonic) {
   return Buffer.from(privateKey.toString(), "hex");
 }
 
-const mnemonic = createMnemonic();
-console.log(mnemonic.toString());
+export default {
+  createPrivateKey,
+  createPublicKey,
+  createAddress,
+  toChecksumAddress,
+  privatekeyToAddress,
+  createMnemonic,
+  mnemonicToPrivateKey,
+};
 
-const privateKey = mnemonicToPrivateKey(mnemonic);
-console.log(privateKey.toString("hex"));
 
-const address = privatekeyToAddress(privateKey);
-console.log(address);
+
+
+
+//const mnemonic = createMnemonic();
+//console.log(mnemonic.toString());
+
+//const privateKey = mnemonicToPrivateKey(mnemonic);
+//console.log(privateKey.toString("hex"));
+
+//const address = privatekeyToAddress(privateKey);
+//console.log(address);
 
 
 
@@ -82,8 +96,6 @@ console.log(address);
 
 //console.log(address);
 //console.log(checksumAddress);
-
-
 
 
 
